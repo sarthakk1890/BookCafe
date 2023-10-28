@@ -1,0 +1,35 @@
+.paymentSuccess{
+    height: 100vh;
+    width: 100vw;
+    background: #fff;
+    max-height: 100%;
+    position: fixed;
+    z-index: 21;
+    flex-direction: column;
+}
+
+.paymentSuccess > svg{
+    font-size: 5vmax;
+    color: tomato;
+    padding-bottom: 5px;
+}
+
+.paymentSuccess > p{
+    font-size: 1.2vmax;
+    color: rgba(0, 0, 0, 0.51);
+}
+
+.paymentSuccess > a{
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    padding: 1vmax 3vmax;
+    cursor: pointer;
+    font: 400 1vmax "Roboto";
+    text-decoration: none;
+    margin-top: 2vmax;
+}
+
+.paymentSuccess > a:hover{
+    background-color: rgb(71, 71, 71);
+}

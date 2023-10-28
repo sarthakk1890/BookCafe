@@ -1,0 +1,143 @@
+:root{
+    --color-menu: white;
+}
+
+/*-------------------Main header-------------------- */
+.header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    padding-inline-end: 0;
+    background-color: transparent;
+    z-index: 29;
+}
+
+/* --------------------Image logo------------------------ */
+
+.logoImg {
+    align-self: flex-start;
+}
+
+.logoImg img {
+    width: 15rem;
+}
+
+/* ------------------Menu----------------------------- */
+
+.navMenu ul {
+    display: flex;
+    gap: var(--gap, 1rem);
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(1rem);
+}
+
+
+.navMenu ul li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    color: var(--color-menu);
+}
+
+.navIcons {
+    font-size: 1.4rem;
+    margin-inline-end: 0.75rem;
+}
+
+.navMenu ul li .onActive {
+    display: none;
+}
+
+.navMenu ul li .active .notActive {
+    display: none;
+}
+
+.navMenu ul li .active .onActive {
+    display: block;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+
+/* ------------------Responsiveness-------------------------- */
+
+@media (max-width: 70em) {
+
+    .navMenu ul {
+        --gap: 2rem;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-color: transparent;
+        background: url('../../../assets/icons8-hamburger.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 1rem;
+        border: 0;
+        color: white;
+        aspect-ratio: 1;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background: url('../../../assets/icons8-cross.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+
+/* ---------------------For small Screens------------------------------ */
+@media (max-width: 50em) {
+    .header{
+        flex-direction: column;
+    }
+
+    .logoImg {
+        align-self: auto;
+    }
+
+    .logoImg img{
+        width: 250px;
+    }
+
+    .searchBar div input{
+        width: 70vw;
+    }
+}
+
+/* ---------------------For big Screens------------------------------ */
+@media (min-width: 70em) {
+    .navMenu ul {
+        --gap: 3rem;
+        padding-block: 1rem;
+        padding-inline: clamp(3rem, 6vw, 10rem);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
