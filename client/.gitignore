@@ -10,7 +10,7 @@
 
 # production
 # Comment out this line to include the /build directory
-/build
+# /build
 
 # misc
 /.DS_Store

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4ff36805.css",
+    "main.js": "/static/js/main.430da620.js",
+    "static/media/background_bookCafe.jpg": "/static/media/background_bookCafe.23398f5478014c2b3b22.jpg",
+    "static/media/profile.png": "/static/media/profile.4528e6f2751f53694618.png",
+    "static/media/footerHeading.png": "/static/media/footerHeading.8e16a74c3ec600b6a707.png",
+    "static/media/heading.png": "/static/media/heading.1b014480d41beafa230d.png",
+    "static/media/avatarPreview.png": "/static/media/avatarPreview.98d79ab0503c2f1f5bf6.png",
+    "index.html": "/index.html",
+    "static/media/icons8-cross.svg": "/static/media/icons8-cross.b24952f54e26f48cf098.svg",
+    "static/media/icons8-hamburger.svg": "/static/media/icons8-hamburger.8c65c6b090b7017a92f1.svg",
+    "main.4ff36805.css.map": "/static/css/main.4ff36805.css.map",
+    "main.430da620.js.map": "/static/js/main.430da620.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ff36805.css",
+    "static/js/main.430da620.js"
+  ]
+}
