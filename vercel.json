@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "name": "bookcafe-deployment",
+    "builds": [
+      {
+        "src": "client/package.json",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "backend/package.json",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/v1/(.*)",
+        "dest": "backend/server.js"  
+      },
+      {
+        "src": "/(.*)",
+        "dest": "client/index.html"
+      }
+    ]
+  }
+  
