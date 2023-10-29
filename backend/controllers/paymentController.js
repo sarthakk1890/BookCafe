@@ -3,7 +3,7 @@ const catchAsyncError = require("../middleware/catchAsyncError");
 const Razorpay = require('razorpay');
 const crypto = require("crypto")
 
-const instance = new Razorpay({
+const razorpay = new Razorpay({
     key_id: process.env.RAZORPAY_ID_KEY,
     key_secret: process.env.RAZORPAY_SECRET_KEY
 })
@@ -16,7 +16,7 @@ exports.processPayment = catchAsyncError(async (req, res, next) => {
         payment_capture: req.body.payment_capture
     }
 
-    const order = await instance.orders.create(options);
+    const order = await razorpay.orders.create(options);
 
     if (!order) {
         return next(new ErrorHandler("Server Error", 500));

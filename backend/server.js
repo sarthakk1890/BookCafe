@@ -22,14 +22,14 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-const server = app.listen(process.env.PORT, () => {
-    console.log(`Server is working on http://localhost:${process.env.PORT}`);
+const server = app.listen(process.env.PORT || 4000, () => {
+    console.log(`Server is working on http://localhost:${process.env.PORT || 4000}`);
 })
 
 //unhandled Promise rejection error :- like when the URL of database is disturbed
 //to resolve it we would crash the server
 process.on("unhandledRejection", err => {
-    console.log(`Error ${err.essage}`);
+    console.log(`Error ${err.message}`);
     console.log("Shutting down the server due to unhandles promise rejection");
     server.close(() => {
         process.exit(1);
